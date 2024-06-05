@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon/iconb96.png" type="image/x-icon"/>
+    <!-- <link rel="icon" href="favicon adresi" type="image/x-icon"/>
+    <link rel="icon" href="favicon adresi" type="image/x-icon"/> -->
+    <title>BTNInteract</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="login-section">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <div class="button-group">
+                <button type="submit">Login</button>
+                <button type="button" id="show-signup">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container hidden" id="signup-section">
+        <h1>Sign Up</h1>
+        <form id="signup-form">
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" required>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" required>
+            <div class="button-group">
+                <button type="submit">Sign Up</button>
+                <button type="button" id="show-login">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container hidden" id="task-section">
+        <div class="header">
+            <h2>Welcome, <span id="user-name"></span></h2>
+            <button id="logout">Logout</button>
+        </div>
+        <h3>Assign a New Task</h3>
+        <form id="task-form">
+            <label for="task-title">Task Title:</label>
+            <input type="text" id="task-title" required>
+            <label for="task-desc">Task Description:</label>
+            <textarea id="task-desc" required></textarea>
+            <label for="task-assign">Assign To:</label>
+            <select id="task-assign" required></select>
+            <button type="submit">Add Task</button>
+        </form>
+        <h3>Your Tasks</h3>
+        <ul id="task-list"></ul>
+        <h3>Users</h3>
+        <ul id="user-list"></ul>
+    </div>
+
+    <div class="container hidden" id="admin-section">
+        <div class="header">
+            <h2>Admin Panel</h2>
+            <button id="admin-logout">Logout</button>
+        </div>
+        <h3>All Tasks</h3>
+        <ul id="admin-task-list"></ul>
+        <h3>All Users</h3>
+        <ul id="admin-user-list"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
